@@ -5,5 +5,17 @@ const DynamicUploader = dynamic(() => import("./components/Uploader"), {
 });
 
 export default function Page() {
-  return <DynamicUploader />;
+  return (
+    <div
+      style={{
+        height: "100dvh",
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
+        padding: "1rem",
+      }}
+    >
+      <DynamicUploader />
+    </div>
+  );
 }
