@@ -13,15 +13,15 @@ export async function POST(req: Request) {
       origin: origin as string,
       provider,
       fileParams,
-      bucketName: process.env.AWS_BUCKET_NAME!,
+      bucketName: process.env.BACKBLAZE_BUCKET_NAME!,
       s3ClientConfig: {
-        region: process.env.AWS_REGION,
+        region: process.env.BACKBLAZE_BUCKET_REGION,
         credentials: {
-          accessKeyId: process.env.AWS_ACCESS_KEY_ID!,
-          secretAccessKey: process.env.AWS_SECRET_ACCESS_KEY!,
+          accessKeyId: process.env.BACKBLAZE_KEY_ID!,
+          secretAccessKey: process.env.BACKBLAZE_APP_KEY!,
         },
-        // endpoint: process.env.DIGITAL_OCEAN_SPACES_ENDPOINT, // In this format: https://...
-        // forcePathStyle: false,
+        endpoint: process.env.BACKBLAZE_S3_ENDPOINT, // In this format: https://...
+        forcePathStyle: false,
       },
     });
 
