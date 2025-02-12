@@ -1,4 +1,4 @@
-import { s3GeneratePresignedUrl } from "@bassem97/upup/server";
+import { s3GeneratePresignedUrl } from "upup-react-file-uploader/server";
 import { NextResponse } from "next/server";
 
 export async function POST(req: Request) {

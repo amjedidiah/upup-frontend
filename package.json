@@ -3,22 +3,18 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "predev": "rm -rf .next && pnpm add @bassem97/upup",
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"
   },
   "dependencies": {
-    "@bassem97/upup": "file:../upup",
-    "@mui/material": "^6.1.8",
+    "upup-react-file-uploader": "file:../upup-main/upup-react-file-uploader-1.1.0.tgz",
     "@tailwindcss/postcss": "^4.0.0",
-    "clsx": "^2.1.1",
     "next": "^14.2.3",
     "postcss": "^8.5.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "tailwind-merge": "^2.6.0",
     "tailwindcss": "^4.0.0"
   },
   "devDependencies": {
