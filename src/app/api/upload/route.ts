@@ -4,7 +4,7 @@ import { NextResponse } from "next/server";
 export async function POST(req: Request) {
   try {
     const body = await req.json();
-    const { provider, ...fileParams } = body;
+    const { provider, enableAutoCorsConfig,  ...fileParams } = body;
 
     const origin = req.headers.get("origin");
 
@@ -23,6 +23,7 @@ export async function POST(req: Request) {
         endpoint: process.env.BACKBLAZE_S3_ENDPOINT, // In this format: https://...
         forcePathStyle: false,
       },
+      enableAutoCorsConfig
     });
 
     return NextResponse.json(presignedData);

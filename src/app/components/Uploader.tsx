@@ -28,6 +28,7 @@ export default function Uploader() {
           onedrive_client_id: process.env.NEXT_PUBLIC_ONEDRIVE_CLIENT_ID!,
         },
       }}
+      // accept="application/pdf"
       // dark
       classNames={{
         // containerFull: "bg-green-500",
@@ -95,6 +96,7 @@ export default function Uploader() {
       customProps={{
         fendi: true,
       }}
+      enableAutoCorsConfig={false}
     />
   );
 }
